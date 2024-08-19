@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  database:
+    image: postgres:latest
+    container_name: database-prisma
+    restart: always
+    environment:
+      POSTGRES_DB: prisma-db
+      POSTGRES_USER: rodrigo
+      POSTGRES_PASSWORD: Rodrigom1234@
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql
