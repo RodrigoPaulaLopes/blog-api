@@ -12,10 +12,10 @@ class UserController {
     }
 
     async create(req: Request, res: Response) {
-        const { name, email } = req.body;
+        const { name, email, password } = req.body;
         
         try {
-            const user: UserDTO = await this.createUserService.execute({ name, email });
+            const user: UserDTO = await this.createUserService.execute({ name, email, password });
             res.status(201).json(user);
         } catch (error) {
             res.status((error as AppError).statusCode).json({ error: (error as AppError).message });

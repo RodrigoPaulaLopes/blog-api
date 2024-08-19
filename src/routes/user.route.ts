@@ -9,6 +9,7 @@ userRouter.post("/create", celebrate({
     [Segments.BODY]: Joi.object().keys({
       name: Joi.string().required(),
       email: Joi.string().email().required(), 
+      password: Joi.string().required(),
     })}), userController.create)
 
 export default userRouter;

@@ -5,9 +5,9 @@ services:
     container_name: database-prisma
     restart: always
     environment:
-      POSTGRES_DB: prisma-db
-      POSTGRES_USER: rodrigo
-      POSTGRES_PASSWORD: Rodrigom1234@
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5434:5432"
     volumes:
