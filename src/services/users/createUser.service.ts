@@ -26,6 +26,8 @@ class CreateUserService {
 
         return user as UserDTO;
     }
+
+    
 }
 
 export default CreateUserService;
