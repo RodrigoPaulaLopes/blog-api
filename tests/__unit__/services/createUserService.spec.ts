@@ -2,8 +2,7 @@ import { User } from '@prisma/client'
 import { prismaMock } from '../../../src/__mocks__/singleton'
 import UserDTO from '../../../src/dtos/user.dto'
 import CreateUserService from '../../../src/services/users/createUser.service'
-import AppError from '../../../src/errors/error'
-import { log } from 'console'
+
 
 describe("###################### Create user service ####################################", () => {
 
