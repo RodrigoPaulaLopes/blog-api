@@ -2,8 +2,8 @@ import { PrismaClient, User } from "@prisma/client";
 import UserDTO from "../../dtos/user.dto";
 import AppError from "../../errors/error";
 import bcrypt from "bcrypt";
+import prisma from "../../prismaClient";
 
-const prisma = new PrismaClient();
 
 class CreateUserService {
     async execute({ name, email, password }: UserDTO): Promise<UserDTO> {
