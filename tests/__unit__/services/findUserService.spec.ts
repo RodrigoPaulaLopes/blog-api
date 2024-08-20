@@ -14,7 +14,7 @@ describe("##################### Find user service ########################", () 
             password: "hashad_pass"
         }
 
-        prismaMock.user.findUnique.mockResolvedValueOnce(user)
+        prismaMock.user.findFirst.mockResolvedValueOnce(user)
         const findUserService = new FindUserService()
 
 

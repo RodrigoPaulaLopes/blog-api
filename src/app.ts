@@ -5,8 +5,6 @@ import AppError from "./errors/error";
 
 const app = express();
 app.use(express.json());
-app.use("/api/v1/user", userRouter);
-
 app.use((error: Error | AppError | CelebrateError, request: Request, response: Response, next: NextFunction) => {
     if (error instanceof AppError) {
         return response.status(error.statusCode).json({
@@ -26,4 +24,8 @@ app.use((error: Error | AppError | CelebrateError, request: Request, response: R
         message: error.message
     })
 })
+
+app.use("/api/v1/user", userRouter);
+
+
 export default app
